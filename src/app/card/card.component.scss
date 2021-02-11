@@ -1,0 +1,23 @@
+@import "src/variables";
+
+.container {
+    margin: $spc1 auto;
+    padding: 3 * $spc1;
+    border: 1px solid black;
+}
+
+.grid-view {
+    display: flex;
+}
+
+.card {
+    border: 1px solid $grey-dark;
+    background-color: $primary;
+    flex-basis: 50%;
+    flex-grow: 1;
+    margin: $spc1;
+}
+
+.card .img {
+    
+}

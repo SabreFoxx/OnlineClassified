@@ -1,0 +1,20 @@
+// If we're going to override Bulma variables, we need to do it before importing Bulma modules
+// So in our styles.scss file, we should import this file before importing Bulma and/or its modules
+
+/* Imports necessary to modify bulma variables */
+@import "node_modules/bulma/sass/utilities/initial-variables",
+"node_modules/bulma/sass/utilities/functions";
+/* Override initial variables default here */
+// Add a serif family
+$family-serif: "Merriweather", "Georgia", serif;
+/* End override initial variables */
+
+
+/* Import necessary to modify bulma derived variables */
+@import "node_modules/bulma/sass/utilities/derived-variables";
+/* Override derived variables default here */
+/* End override derived variables */
+
+
+/* Set project specific SCSS variables */
+$spc1: 1em;
