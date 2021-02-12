@@ -12,4 +12,18 @@
 @import "node_modules/bulma/sass/components/panel.sass";
 @import "node_modules/bulma/sass/components/tabs.sass";
 
+.svg-icon {
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
 
+.grid-view {
+    display: flex;
+}
+
+.grid-view.has-floor {
+    align-items: flex-end;
+}

@@ -2,22 +2,51 @@
 
 .container {
     margin: $spc1 auto;
-    padding: 3 * $spc1;
-    border: 1px solid black;
+    padding: $spc1 3 * $spc1;
 }
 
-.grid-view {
-    display: flex;
+@mixin curve {
+    border-radius: 20px;
 }
 
 .card {
-    border: 1px solid $grey-dark;
-    background-color: $primary;
-    flex-basis: 50%;
-    flex-grow: 1;
+    $radius: 12px;
+
+    border: 1px solid $grey-light;
+    background-color: transparent;
     margin: $spc1;
+    border-radius: $radius;
+    padding-bottom: $rspc0;
+    flex: {
+        basis: 40%;
+        grow: 1;
+    }
+
+    .img {
+        border-radius: $radius $radius 0 0;
+        margin-top: -2px;
+    }
+
+    .img ~ * {
+        padding: {
+            left: $rspc0;
+            right: $rspc0;
+        }
+    }
 }
 
-.card .img {
-    
+.actions {
+    margin-top: $rspc0;
+
+    .svg-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    * {
+        flex: {
+            basis: 40%;
+            grow: 1;
+        }
+    }
 }
