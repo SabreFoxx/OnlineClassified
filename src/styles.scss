@@ -12,6 +12,20 @@
 @import "node_modules/bulma/sass/components/panel.sass";
 @import "node_modules/bulma/sass/components/tabs.sass";
 
+body {
+    font-size: calc(1vw + 0.6em);
+}
+
+@media (min-width: 48rem) {
+    body {
+        font-size: calc(1vw + 0.4em);
+    }
+}
+
+img {
+    max-width: 100% !important;
+}
+
 .svg-icon {
     width: 1rem;
     height: 1rem;
@@ -22,8 +36,7 @@
 
 .grid-view {
     display: flex;
-}
-
-.grid-view.has-floor {
-    align-items: flex-end;
+    &.has-floor {
+        align-items: flex-end;
+    }
 }

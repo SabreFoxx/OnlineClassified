@@ -17,9 +17,15 @@
     margin: $spc1;
     border-radius: $radius;
     padding-bottom: $rspc0;
+    transition: transform 0.2s ease;
+
     flex: {
-        basis: 40%;
+        basis: 25%;
         grow: 1;
+    }
+
+    &:hover {
+        transform: scale(1.15);
     }
 
     .img {
@@ -27,7 +33,7 @@
         margin-top: -2px;
     }
 
-    .img ~ * {
+    .img~* {
         padding: {
             left: $rspc0;
             right: $rspc0;
@@ -48,5 +54,22 @@
             basis: 40%;
             grow: 1;
         }
+    }
+}
+
+.add-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    figcaption {
+        font-size: 5em;
+    }
+
+    .add-icon {
+        margin-top: $rspc2;
+        width: 100%;
+        height: 100%;
     }
 }
