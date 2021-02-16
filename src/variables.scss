@@ -19,7 +19,12 @@ $family-serif: "Merriweather", "Georgia", serif;
 /* Set project specific SCSS variables */
 $spc0: 0.5em;
 $spc1: 1em;
+$spc2: 2em;
 
 $rspc0: 0.5rem;
 $rspc1: 1rem;
 $rspc2: 2rem;
+
+@mixin regular-padding {
+    padding: $spc2;
+}

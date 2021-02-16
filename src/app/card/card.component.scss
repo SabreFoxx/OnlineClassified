@@ -4,15 +4,17 @@
     $radius: 12px;
 
     border: 1px solid $grey-light;
+    margin: $spc1 $spc0 / 2;
     background-color: transparent;
-    margin: $spc1;
     border-radius: $radius;
     padding-bottom: $rspc0;
     transition: transform 0.2s ease;
 
-    flex: {
-        basis: 25%;
-        grow: 1;
+    @media (min-width: 35em) {
+        flex: {
+            basis: 30%;
+            grow: 0;
+        }
     }
 
     &:hover {

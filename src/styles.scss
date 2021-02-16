@@ -29,23 +29,17 @@ img {
 .container {
     margin: $spc1 auto;
     max-width: 1080px;
-}
 
-.section {
-    margin: $spc1;
-    max-width: 1080px;
+    &--padded {
+        @include regular-padding;
+    }
 }
 
 .v-separator {
-    position: absolute;
-    left: 0;
-    top: 25%;
-    bottom: 25%;
-    background-color: $grey-dark;
-    border-radius: 5px;
-    height: 500px;
+    background-color: $grey-light;
     width: 5px;
-    margin: $rspc0 0;
+    margin: 0;
+    padding: 0;
 }
 
 .svg-icon {
@@ -57,36 +51,53 @@ img {
 }
 
 .grid-view {
-    display: flex;
+    @include regular-padding;
 
-    &.has-floor {
-        align-items: flex-end;
+    @media (min-width: 35em) {
+        display: flex;
+        justify-content: space-between;
+
+        &--has-floor {
+            align-items: flex-end;
+        }
     }
 }
 
 .skeleton {
+    margin: $spc1 auto;
     max-width: 1080px;
+    $large-width: 70%;
+    $small-width: 100% - $large-width - 1%;
 
-    // float clearfix
-    &::before, &::after {
-        display: table;
-        content: " ";
+    >aside {
+        display: none;
+
+        @media (min-width: 35em) {
+            display: block;
+            width: $small-width;
+            margin: auto;
+        }
     }
 
-    &::after {
-        clear: both;
+    @media (min-width: 35em) {
+        >* {
+            float: left;
+        }
+
+        >main {
+            width: $large-width;
+        }
+
+        // float clearfix
+        &::before,
+        &::after {
+            display: table;
+            content: " ";
+        }
+
+        &::after {
+            clear: both;
+        }
     }
 
-    > * {
-        float: left;
-    }
-
-    > main {
-        width: 70%;
-    }
-
-    > aside {
-        width: 25%;
-        margin: auto;
-    }
 }
