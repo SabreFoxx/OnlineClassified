@@ -26,6 +26,28 @@ img {
     max-width: 100% !important;
 }
 
+.container {
+    margin: $spc1 auto;
+    max-width: 1080px;
+}
+
+.section {
+    margin: $spc1;
+    max-width: 1080px;
+}
+
+.v-separator {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    bottom: 25%;
+    background-color: $grey-dark;
+    border-radius: 5px;
+    height: 500px;
+    width: 5px;
+    margin: $rspc0 0;
+}
+
 .svg-icon {
     width: 1rem;
     height: 1rem;
@@ -36,7 +58,35 @@ img {
 
 .grid-view {
     display: flex;
+
     &.has-floor {
         align-items: flex-end;
+    }
+}
+
+.skeleton {
+    max-width: 1080px;
+
+    // float clearfix
+    &::before, &::after {
+        display: table;
+        content: " ";
+    }
+
+    &::after {
+        clear: both;
+    }
+
+    > * {
+        float: left;
+    }
+
+    > main {
+        width: 70%;
+    }
+
+    > aside {
+        width: 25%;
+        margin: auto;
     }
 }
