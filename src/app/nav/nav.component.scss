@@ -1,0 +1,78 @@
+@import "src/variables";
+
+.burger {
+  height: 15vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: $primary;
+  cursor: pointer;
+  transition: $nav-easing;
+  
+  &:hover {
+    background: mix(black, $primary, 10);
+  }
+  
+  &__beef {
+    position: relative;
+    height: 2px;
+    width: 40px;
+    background: white;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: white;
+    }
+    
+    &:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: white;
+    }
+  }
+  
+  &__beef,
+  &__beef:before,
+  &__beef:after {
+    will-change: transform;
+    transition: $nav-easing;
+  }
+  
+  &--active {
+    .burger__beef {
+      transform: rotate(90deg);
+      &:before {
+        transform: rotate(-45deg) translate(-7px,-7px) scaleX(0.7);
+      }
+      
+      &:after {
+        transform: rotate(45deg) translate(-7px,7px) scaleX(0.7);
+      }
+    }
+  }
+  
+  @media (max-width: 640px) {
+    height: 10vh;
+    
+    &__beef {
+      transform: scale(0.8);
+    }
+    
+    &--active {
+      .burger__beef {
+        transform: scale(0.8) rotate(90deg);
+      }
+    }
+  }
+}

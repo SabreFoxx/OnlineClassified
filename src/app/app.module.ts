@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { SvgComponent } from './svg/svg.component';
 import { TrialComponent } from './trial/trial.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     SvgComponent,
-    TrialComponent
+    TrialComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
