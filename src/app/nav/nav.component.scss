@@ -15,7 +15,7 @@
     background: mix(black, $primary, 10);
   }
   
-  &__beef {
+  &__slice {
     position: relative;
     height: 2px;
     width: 40px;
@@ -42,15 +42,15 @@
     }
   }
   
-  &__beef,
-  &__beef:before,
-  &__beef:after {
+  &__slice,
+  &__slice:before,
+  &__slice:after {
     will-change: transform;
     transition: $nav-easing;
   }
   
   &--active {
-    .burger__beef {
+    .burger__slice {
       transform: rotate(90deg);
       &:before {
         transform: rotate(-45deg) translate(-7px,-7px) scaleX(0.7);
@@ -65,12 +65,12 @@
   @media (max-width: 640px) {
     height: 10vh;
     
-    &__beef {
+    &__slice {
       transform: scale(0.8);
     }
     
     &--active {
-      .burger__beef {
+      .burger__slice {
         transform: scale(0.8) rotate(90deg);
       }
     }

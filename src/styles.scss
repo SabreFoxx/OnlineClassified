@@ -99,7 +99,6 @@ img {
             clear: both;
         }
     }
-
 }
 
 .nav {
@@ -107,7 +106,7 @@ img {
     z-index: 1;
     top: 0;
     left: 0;
-    width: 100px;
+    width: $nav-width;
     backface-visibility: hidden;
 
     &__list {
@@ -146,8 +145,8 @@ img {
         }
     }
 
-    @media (max-width: 640px) {
-        width: 70px;
+    @media (min-width: 64em) {
+        width: $nav-width--wide;
 
         &__list {
             height: 90vh;
