@@ -10,6 +10,10 @@
   background: $primary;
   cursor: pointer;
   transition: $nav-easing;
+
+  @media (min-width: 48em) {
+    display: none;
+  }
   
   &:hover {
     background: mix(black, $primary, 10);
@@ -58,20 +62,6 @@
       
       &:after {
         transform: rotate(45deg) translate(-7px,7px) scaleX(0.7);
-      }
-    }
-  }
-  
-  @media (max-width: 640px) {
-    height: 10vh;
-    
-    &__slice {
-      transform: scale(0.8);
-    }
-    
-    &--active {
-      .burger__slice {
-        transform: scale(0.8) rotate(90deg);
       }
     }
   }
